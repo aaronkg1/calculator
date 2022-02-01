@@ -17,13 +17,13 @@ let operateValue = "";
 numbers.forEach(number => number.addEventListener('click', () => {
     if (operateValue === "") {
     output.textContent += number.value;
-    valueOne = parseInt(output.textContent);
+    valueOne = parseFloat(output.textContent).toFixed(2);
 }
 
 
 else {
     output.textContent += number.value;
-    valueTwo = parseInt(output.textContent);
+    valueTwo = parseFloat(output.textContent).toFixed(2);
 }
 
     if (output.textContent.length > 11) {
@@ -95,14 +95,14 @@ equalsButton.addEventListener('click', () => {
    
 
 
-    let toNumberOne = parseInt(valueOne);
-    let toNumberTwo = parseInt(valueTwo);
+    let toNumberOne = parseFloat(valueOne).toFixed(2);
+    let toNumberTwo = parseFloat(valueTwo).toFixed(2);
     
    
     result = operate(operateValue, toNumberOne, toNumberTwo);
     output.textContent = result;
-    valueOne = parseInt(result);
-    valueTwo = parseInt(toNumberTwo);
+    valueOne = parseFloat(result).toFixed(2);
+    valueTwo = parseFloat(toNumberTwo).toFixed(2);
     
 })
 

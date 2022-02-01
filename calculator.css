@@ -102,6 +102,9 @@ button:hover {
     box-shadow: 0.5px 0.5px rgba(7, 7, 7, 0.502);
  }
 
+ .operator {
+     font-size: 25px;
+ }
 
  
 .calculator #top {
