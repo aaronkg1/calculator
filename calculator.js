@@ -109,7 +109,7 @@ equalsButton.addEventListener('click', () => {
 
 
 function add(x, y) {
-    let result = x + y;
+    let result = parseFloat(x) + parseFloat(y);
     return result;
 }
 
