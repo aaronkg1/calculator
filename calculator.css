@@ -1,0 +1,120 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    background: black;
+}
+
+.header {
+    height: 100px;
+    width: 100%;
+    color: white;
+
+}
+
+
+
+.displayOutput {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-content: center;
+   max-width: 500px;
+   height: 100px; 
+   background:#827b5e;
+   border-top: solid black 5px;
+   border-bottom: solid black 5px;
+   border-left: solid grey 5px;
+   border-right: solid grey 5px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.buttons {
+background: #ddc5a1;
+display: flex;
+justify-content: space-around;
+align-content: space-around;
+flex-direction: column;
+padding: 5px;
+
+
+gap: 10px;
+}
+
+
+#output {
+    flex: auto;
+    word-wrap: break-word;
+    max-width: 400px;
+    max-height: auto;
+    height: auto;
+    font-family: Digital-7;
+    font-size: 70px;
+    text-align: end;
+}
+
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: center;
+    align-content: center;
+    gap: 5px;
+    max-width: 500px;
+    min-width: 5;
+    width: 500px;
+    height: auto;
+    border: solid rgb(108, 108, 108) 10px;
+    box-shadow: 3px 3px rgba(7, 7, 7, 0.502);
+    border-radius: 2px;
+    background: grey;
+    
+    
+}
+
+button {
+flex: auto;
+min-width: 60px;
+min-height: 60px;
+border: solid black 4px;
+background: #3b3b3b;
+color: white;
+border-radius: 3%;
+font-size: 20px;
+}
+
+button:hover {
+    flex: auto;
+    min-width: 60px;
+    min-height: 60px;
+    border: solid black 4px;
+    background: #3b3b3b;
+    color: white;
+    border-radius: 3%;
+    transform: translateY(1px);
+    box-shadow: 0.5px 0.5px rgba(7, 7, 7, 0.502);
+
+    }
+
+.calculator #top {
+   background: #292929;
+   color: #968b5f;
+   font-family: 'Roboto Mono', monospace;
+   font-size: 20px;
+   border-bottom: solid red 2px;
+   padding-left: 10px;
+   padding-right: 10px;
+   display: flex;
+   justify-content: space-between;
+}
+
+.main {
+    text-align: center;
+}
