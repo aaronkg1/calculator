@@ -44,12 +44,17 @@ cancelButton.addEventListener('click', (e) => {
     output.textContent = output.textContent.slice(0, output.textContent.length -1);
 
     if (operateValue = "") {
-        valueOne = output.textContent;
+        valueOne = parseInt(output.textContent);
+        return valueOne;
     }
 
     else {
-        valueTwo = output.textContent;
+        valueTwo = parseInt(output.textContent);
+        console.log(valueTwo);
+        return valueTwo;
     }
+ 
+    
 })
 
 addButton.addEventListener('click', (event) => {
@@ -79,7 +84,7 @@ equalsButton.addEventListener('click', () => {
     let toNumberTwo = parseInt(valueTwo);
     valueTwo = "0";
     
-    result = operate(operateValue, toNumberOne, toNumberTwo);
+    result = BigInt(operate(operateValue, toNumberOne, toNumberTwo));
     output.textContent = result;
     valueOne = result;
     
