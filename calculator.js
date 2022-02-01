@@ -80,13 +80,14 @@ multiplyButton.addEventListener('click', () => {
 });
 
 equalsButton.addEventListener('click', () => {
+   
     let toNumberOne = parseInt(valueOne);
     let toNumberTwo = parseInt(valueTwo);
-    valueTwo = "0";
     
-    result = BigInt(operate(operateValue, toNumberOne, toNumberTwo));
+   
+    result = operate(operateValue, toNumberOne, toNumberTwo);
     output.textContent = result;
-    valueOne = result;
+    valueOne = parseInt(result);
     
 
 
@@ -95,20 +96,22 @@ equalsButton.addEventListener('click', () => {
 
 function add(x, y) {
     let result = x + y;
-    console.log(result);
     return result;
 }
 
 function subtract(x, y) {
-    return x - y;
+    let result = x - y;
+    return result;
 }
 
 function multiply(x, y) {
-    return x * y;
+    let result = x * y;
+    return result;
 }
 
 function divide(x, y) {
-    return x / y;
+    let result = x / y;
+    return result;
 }
 
 function operate(operator, x, y) {
