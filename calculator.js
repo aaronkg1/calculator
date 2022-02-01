@@ -43,15 +43,12 @@ clearButton.addEventListener('click', () => {
 cancelButton.addEventListener('click', (e) => {
     output.textContent = output.textContent.slice(0, output.textContent.length -1);
 
-    if (operateValue = "") {
-        valueOne = parseInt(output.textContent);
-        return valueOne;
+    if (operateValue == "") {
+        valueOne = valueOne.slice(0, valueOne.length -1);
     }
 
-    else {
-        valueTwo = parseInt(output.textContent);
-        console.log(valueTwo);
-        return valueTwo;
+    else  {
+        valueTwo = valueTwo.slice(0, valueOne.length -1);
     }
  
     
@@ -88,7 +85,7 @@ equalsButton.addEventListener('click', () => {
     result = operate(operateValue, toNumberOne, toNumberTwo);
     output.textContent = result;
     valueOne = parseInt(result);
-    
+
 
 
 })
