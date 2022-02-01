@@ -1,16 +1,10 @@
-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    background: black;
-}
-
 .header {
     height: 100px;
     width: 100%;
-    color: white;
-
+    color: black;
+    font-family: Digital-7;
+    font-size: 40px;
+    text-align: center;
 }
 
 
@@ -21,18 +15,19 @@ body {
    justify-content: center;
    align-content: center;
    max-width: 500px;
+   margin: 10px 10px;
    height: 130px; 
-   background:#827b5e;
-   border-top: solid black 5px;
+   background:#5e826b;
+   border-top: solid black 10px;
    border-bottom: solid black 5px;
-   border-left: solid grey 5px;
-   border-right: solid grey 5px;
+   border-left: solid rgb(92, 92, 92) 10px;
+   border-right: solid rgb(92, 92, 92) 5px;
 }
 
 .row {
     display: flex;
     justify-content: center;
-    gap: 8px;
+    gap: 13px;
 }
 
 .buttons {
@@ -44,7 +39,7 @@ flex-direction: column;
 padding: 5px;
 
 
-gap: 10px;
+gap: 13px;
 }
 
 
@@ -71,11 +66,15 @@ gap: 10px;
     min-width: 5;
     width: 500px;
     height: auto;
-    border: solid rgb(108, 108, 108) 10px;
-    box-shadow: 3px 3px rgba(7, 7, 7, 0.502);
+    border-top: solid rgba(79, 76, 76, 0.694) 10px;
+    border-right: solid rgba(58, 56, 56, 0.694) 10px;
+    border-left: solid rgba(58, 56, 56, 0.694) 10px;
+
+    border-bottom: solid rgba(23, 21, 21, 0.694) 10px;
+    box-shadow: 10px 10px 3px 0px rgba(99, 98, 98, 0.502);
     border-radius: 2px;
     background: grey;
-    
+    /* transform: rotateX(calc(var(--rotate-x, -1) * 1deg)) rotateY(calc(var(--rotate-y, -1) * 1deg)) rotateX(0deg) translate3d(0, 0, 0); */
     
 }
 
@@ -83,6 +82,7 @@ button {
 flex: auto;
 min-width: 60px;
 min-height: 60px;
+width: 60px;
 border: solid black 4px;
 background: #3b3b3b;
 color: white;
@@ -100,9 +100,10 @@ button:hover {
     border-radius: 3%;
     transform: translateY(1px);
     box-shadow: 0.5px 0.5px rgba(7, 7, 7, 0.502);
+ }
 
-    }
 
+ 
 .calculator #top {
    background: #292929;
    color: #968b5f;
@@ -117,4 +118,13 @@ button:hover {
 
 .main {
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding-top: 50px;
+
+}
+
+#clear {
+    background: rgba(209, 118, 7, 0.94);
 }

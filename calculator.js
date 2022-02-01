@@ -7,7 +7,8 @@ const divideButton = document.querySelector("#divide")
 const subtractButton = document.querySelector("#subtract");
 const multiplyButton = document.querySelector("#multiply");
 const equalsButton = document.querySelector("#equals");
-const cancelButton = document.querySelector("#cancel")
+const cancelButton = document.querySelector("#cancel");
+const plusorminusButton = document.querySelector("#plusorminus");
 let valueOne = 0;
 let valueTwo = 0;
 let operateValue = "";
@@ -15,26 +16,39 @@ let operateValue = "";
 
 numbers.forEach(number => number.addEventListener('click', () => {
     if (operateValue === "") {
-    valueOne += number.value;
     output.textContent += number.value;
+    valueOne = parseInt(output.textContent);
 }
 
-else {
-    valueTwo += number.value;
-    output.textContent += number.value;
 
+else {
+    output.textContent += number.value;
+    valueTwo = parseInt(output.textContent);
 }
 
     if (output.textContent.length > 11) {
         output.textContent = output.textContent.slice(0,11);
     }
+    
 }));
+
+plusorminusButton.addEventListener('click', () => {
+    if (output.textContent == "") {
+        output.textContent = "-";
+    }
+
+    else if (output.textContent == "-") {
+        output.textContent = "";
+    }
+})
+
+
 
 
 
 clearButton.addEventListener('click', () => {
     
-    output.textContent = " ";
+    output.textContent = "";
     valueOne = "";
     valueTwo = "";
     operateValue = "";
@@ -76,8 +90,11 @@ multiplyButton.addEventListener('click', () => {
     operateValue = "multiply";  
 });
 
+
 equalsButton.addEventListener('click', () => {
    
+
+
     let toNumberOne = parseInt(valueOne);
     let toNumberTwo = parseInt(valueTwo);
     
@@ -85,10 +102,10 @@ equalsButton.addEventListener('click', () => {
     result = operate(operateValue, toNumberOne, toNumberTwo);
     output.textContent = result;
     valueOne = parseInt(result);
-
-
-
+    valueTwo = parseInt(toNumberTwo);
+    
 })
+
 
 
 function add(x, y) {
