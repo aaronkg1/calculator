@@ -131,7 +131,7 @@ font-size: 20px;
 
 button:hover {
     transform: translateY(1px);
-    box-shadow: 0.5px 0.5px rgba(7, 7, 7, 0.502);
+    background: #605e5e;
  }
 
  .operator {
