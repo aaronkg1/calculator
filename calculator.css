@@ -166,6 +166,10 @@ background: linear-gradient(90deg, rgba(217,215,252,1) 17%, rgba(9,121,53,0.3911
     background: rgba(209, 118, 7, 0.94);
 }
 
+#clear:hover {
+    background: rgba(206, 143, 65, 0.94);
+}
+
 .solarcontainer {
     
     display: flex;
