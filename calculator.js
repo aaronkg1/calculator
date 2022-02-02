@@ -12,7 +12,7 @@ const plusorminusButton = document.querySelector("#plusorminus");
 let valueOne = 0;
 let valueTwo = 0;
 let operateValue = "";
-
+let result;
 
 numbers.forEach(number => number.addEventListener('click', () => {
     if (operateValue === "") {
@@ -53,11 +53,14 @@ cancelButton.addEventListener('click', (e) => {
     output.textContent = output.textContent.slice(0, output.textContent.length - 1);
 
     if (operateValue == "") {
-        valueOne = valueOne.slice(0, valueOne.length - 1);
+        valueOne = output.textContent;
+        // valueOne = valueOne.slice(0, valueOne.length - 1);
     }
 
     else {
-        valueTwo = valueTwo.slice(0, valueOne.length - 1);
+        valueTwo = output.textContent;
+        valueOne = String(result);
+        valueOne = valueOne.slice(0, valueOne.length -1);
     }
 
 })
