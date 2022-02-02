@@ -131,3 +131,34 @@ button:hover {
 #clear {
     background: rgba(209, 118, 7, 0.94);
 }
+
+.solarcontainer {
+    
+    display: flex;
+    justify-content: center;    
+    align-content: center;
+}
+
+.solar {
+    background: rgb(31, 23, 23);
+    border-right: solid rgb(92, 92, 92, 0.687) 1px;
+    width: 40px;
+    height: 50px;
+    align-self: center;
+}
+
+.solarleft {
+    background: rgb(31, 23, 23);
+    border-right: solid rgba(92, 92, 92, 0.687) 1px;
+    border-left: solid rgb(52, 51, 51) 2px;
+    width: 40px;
+    height: 50px;
+    align-self: center;
+}
+
+.solarright {
+    background: rgb(31, 23, 23);
+    width: 40px;
+    height: 50px;
+    align-self: center;
+}

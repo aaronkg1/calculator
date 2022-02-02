@@ -16,20 +16,19 @@ let operateValue = "";
 
 numbers.forEach(number => number.addEventListener('click', () => {
     if (operateValue === "") {
-    output.textContent += number.value;
-    valueOne = parseFloat(output.textContent).toFixed(2);
-}
+        output.textContent += number.value;
+        valueOne = parseFloat(output.textContent).toFixed(4);
+    }
 
-
-else {
-    output.textContent += number.value;
-    valueTwo = parseFloat(output.textContent).toFixed(2);
-}
+    else {
+        output.textContent += number.value;
+        valueTwo = parseFloat(output.textContent).toFixed(4);
+    }
 
     if (output.textContent.length > 11) {
-        output.textContent = output.textContent.slice(0,11);
+        output.textContent = output.textContent.slice(0, 11);
     }
-    
+
 }));
 
 plusorminusButton.addEventListener('click', () => {
@@ -42,12 +41,8 @@ plusorminusButton.addEventListener('click', () => {
     }
 })
 
-
-
-
-
 clearButton.addEventListener('click', () => {
-    
+
     output.textContent = "";
     valueOne = "";
     valueTwo = "";
@@ -55,58 +50,47 @@ clearButton.addEventListener('click', () => {
 });
 
 cancelButton.addEventListener('click', (e) => {
-    output.textContent = output.textContent.slice(0, output.textContent.length -1);
+    output.textContent = output.textContent.slice(0, output.textContent.length - 1);
 
     if (operateValue == "") {
-        valueOne = valueOne.slice(0, valueOne.length -1);
+        valueOne = valueOne.slice(0, valueOne.length - 1);
     }
 
-    else  {
-        valueTwo = valueTwo.slice(0, valueOne.length -1);
+    else {
+        valueTwo = valueTwo.slice(0, valueOne.length - 1);
     }
- 
-    
+
 })
 
 addButton.addEventListener('click', (event) => {
-    
+
     output.textContent = '';
-    operateValue = "add";  
-    
+    operateValue = "add";
 });
 
 divideButton.addEventListener('click', () => {
     output.textContent = '';
-    operateValue = "divide";  
+    operateValue = "divide";
 });
 
 subtractButton.addEventListener('click', () => {
     output.textContent = '';
-    operateValue = "subtract";  
+    operateValue = "subtract";
 });
 
 multiplyButton.addEventListener('click', () => {
     output.textContent = '';
-    operateValue = "multiply";  
+    operateValue = "multiply";
 });
 
 
 equalsButton.addEventListener('click', () => {
-   
 
-
-    let toNumberOne = parseFloat(valueOne).toFixed(2);
-    let toNumberTwo = parseFloat(valueTwo).toFixed(2);
-    
-   
-    result = operate(operateValue, toNumberOne, toNumberTwo);
+    result = operate(operateValue, valueOne, valueTwo);
     output.textContent = result;
-    valueOne = parseFloat(result).toFixed(2);
-    valueTwo = parseFloat(toNumberTwo).toFixed(2);
-    
+    valueOne = parseFloat(result).toFixed(4);
+   
 })
-
-
 
 function add(x, y) {
     let result = parseFloat(x) + parseFloat(y);
@@ -136,6 +120,6 @@ function operate(operator, x, y) {
     } else if (operator == "multiply") {
         return multiply(x, y)
     } else if (operator == "divide") {
-       return divide(x, y);
+        return divide(x, y);
     }
 }
