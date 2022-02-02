@@ -101,7 +101,7 @@ valueTwo = parseFloat(valueTwo);
     result = operate(operateValue, valueOne, valueTwo);
     output.textContent = result;
     valueOne = parseFloat(result);
-   
+
 })
 
 function add(x, y) {
