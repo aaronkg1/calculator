@@ -17,12 +17,12 @@ let operateValue = "";
 numbers.forEach(number => number.addEventListener('click', () => {
     if (operateValue === "") {
         output.textContent += number.value;
-        valueOne = parseFloat(output.textContent);
+        valueOne = output.textContent;
     }
 
     else {
         output.textContent += number.value;
-        valueTwo = parseFloat(output.textContent);
+        valueTwo = output.textContent;
     }
 
     if (output.textContent.length > 11) {
@@ -85,7 +85,8 @@ multiplyButton.addEventListener('click', () => {
 
 
 equalsButton.addEventListener('click', () => {
-
+valueOne = parseFloat(valueOne);
+valueTwo = parseFloat(valueTwo);
     result = operate(operateValue, valueOne, valueTwo);
     output.textContent = result;
     valueOne = parseFloat(result);
