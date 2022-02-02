@@ -53,7 +53,7 @@ background: linear-gradient(90deg, rgba(217,215,252,1) 17%, rgba(9,121,53,0.3911
    max-width: 500px;
    margin: 10px 10px;
    height: 130px; 
-   background:#5e826b;
+   background:#5e7882;
    border-top: solid black 10px;
    border-bottom: solid black 5px;
    border-left: solid rgb(92, 92, 92) 10px;
@@ -130,8 +130,8 @@ border-radius: 3%;
 font-size: 20px;
 }
 
-button:hover {
-    transform: translateY(1px);
+button:active {
+    transform: translateY(3px);
     background: #605e5e;
  }
 
