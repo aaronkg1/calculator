@@ -32,15 +32,39 @@ numbers.forEach(number => number.addEventListener('click', () => {
         output.textContent = output.textContent.slice(0, 11);
     }
 
-if (output.textContent.includes(".")) {
-    pointButton.disabled = true;
-}
+    if (output.textContent.includes(".")) {
+        pointButton.disabled = true;
+    }
 
-else pointButton.disabled = false;
+    else pointButton.disabled = false;
 
 }));
 
+document.addEventListener('keydown', (event) => {
+if (event.code.includes("Digit") || event.code.includes("Period") ) {
 
+    if (operateValue === "") {
+        output.textContent += event.key;
+        valueOne = output.textContent;
+    }
+
+    else {
+        output.textContent += event.key;
+        valueTwo = output.textContent;
+    }
+
+    if (output.textContent.length > 11) {
+        output.textContent = output.textContent.slice(0, 11);
+    }
+
+    if (output.textContent.includes(".") & event.key == ".") {
+        pointButton.disabled = true;
+        
+    }
+
+    else pointButton.disabled = false;
+}
+})
 
 plusorminusButton.addEventListener('click', () => {
     if (output.textContent == "") {
@@ -71,7 +95,7 @@ cancelButton.addEventListener('click', (e) => {
     else {
         valueTwo = output.textContent;
         valueOne = String(result);
-        valueOne = valueOne.slice(0, valueOne.length -1);
+        valueOne = valueOne.slice(0, valueOne.length - 1);
     }
 
 })
@@ -100,14 +124,12 @@ multiplyButton.addEventListener('click', () => {
 
 
 equalsButton.addEventListener('click', () => {
-valueOne = parseFloat(valueOne);
-valueTwo = parseFloat(valueTwo);
+    valueOne = parseFloat(valueOne);
+    valueTwo = parseFloat(valueTwo);
     result = operate(operateValue, valueOne, valueTwo);
     output.textContent = result;
     valueOne = parseFloat(result);
 
-
-    
 })
 
 function add(x, y) {
