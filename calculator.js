@@ -32,7 +32,11 @@ numbers.forEach(number => number.addEventListener('click', () => {
         output.textContent = output.textContent.slice(0, 11);
     }
 
+if (output.textContent.includes(".")) {
+    pointButton.disabled = true;
+}
 
+else pointButton.disabled = false;
 
 }));
 
@@ -102,6 +106,8 @@ valueTwo = parseFloat(valueTwo);
     output.textContent = result;
     valueOne = parseFloat(result);
 
+
+    
 })
 
 function add(x, y) {
